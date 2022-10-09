@@ -19,10 +19,12 @@ public class RegisterPage extends DriverManager {
     WebElement inputPassword = driver.findElement(By.id("Password"));
     WebElement inputConfirmPassword = driver.findElement(By.id("ConfirmPassword"));
     WebElement registerButton = driver.findElement(By.id("register-button"));
+    String failureMessage = "Register Button did not get visible before time out";
 
     public void clickOnGenderFemale() {
         genderFemale.click();
     }
+
 
     public void enterFirstName(String firstName) {
         inputFirstName.sendKeys(firstName);
@@ -55,6 +57,7 @@ public class RegisterPage extends DriverManager {
     }
 
     public void submitRegister()  {
+        driverManager.waitUntilElementIsVisible(registerButton,10,failureMessage);
         registerButton.click();
 
     }

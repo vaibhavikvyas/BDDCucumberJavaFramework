@@ -5,7 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
-public class LoginCompletePage extends DriverManager {
+public class
+LoginCompletePage extends DriverManager {
 
     WebElement logoutButton = driver.findElement(By.className("ico-logout"));
     public Boolean checkLogoutButton(){

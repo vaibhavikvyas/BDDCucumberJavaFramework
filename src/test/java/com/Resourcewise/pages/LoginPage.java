@@ -18,6 +18,7 @@ public class LoginPage extends DriverManager {
     }
 
     public void enterEmailAndPassword(String email,String password){
+
         inputEmail.clear();
         inputEmail.sendKeys(email);
         inputPassword.clear();
@@ -27,4 +28,11 @@ public class LoginPage extends DriverManager {
         loginButton.click();
     }
 
+   // WebElement orderMessage=driver.findElement( By.className ("message"));
+    //String errorMessage=" Element did not load";
+    //waitUntilElementIsVisible(orderMessage,30,errorMessage);
+
+   // WebElement logoutButton=driver.findElement(By.Name("logout"));
+
+   // WebElement element=waitUntilElementIsClickable(logoutButton);
 }

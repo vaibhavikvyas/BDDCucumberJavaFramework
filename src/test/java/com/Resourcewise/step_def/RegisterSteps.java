@@ -1,9 +1,13 @@
 package com.Resourcewise.step_def;
 
 import com.Resourcewise.pages.RegisterPage;
+import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
+import java.util.List;
+import java.util.Map;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalToIgnoringCase;
@@ -21,14 +25,11 @@ public class RegisterSteps {
     @Given("^I Enter FirstName \"([^\"]*)\"$")
     public void i_Enter_FirstName(String firstName) throws Throwable {
         registerPage.enterFirstName(firstName);
-
-
     }
 
     @Given("^I enter LastName \"([^\"]*)\"$")
     public void i_enter_LastName(String lastName) throws Throwable {
         registerPage.enterLastName(lastName);
-
     }
 
     @Given("^I Enter Email \"([^\"]*)\"$")
@@ -48,7 +49,6 @@ public class RegisterSteps {
         registerPage.unCheckNewsLetter();
     }
 
-
     @Given("^I Enter Password \"([^\"]*)\"$")
     public void i_Enter_Password(String password) throws Throwable {
         registerPage.enterPassword(password);
@@ -64,6 +64,15 @@ public class RegisterSteps {
         registerPage.submitRegister();
     }
 
+    @Given("^I enter following details to register$")
+    public void i_enter_following_details_to_register(DataTable registrationDetails) throws Throwable {
+        List<Map<String, String>> data = registrationDetails.asMaps(String.class, String.class);
+        registerPage.enterFirstName(data.get(0).get("firstName"));
+        registerPage.enterLastName(data.get(0).get("lastName"));
+        registerPage.enterEmail(data.get(0).get("email"));
+        registerPage.enterPassword(data.get(0).get("password"));
+        registerPage.enterConfirmPassword(data.get(0).get("confirmPassword"));
 
+    }
 
 }
