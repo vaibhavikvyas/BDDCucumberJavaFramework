@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.Resourcewise.RunCukesTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.679 s <<< FAILURE! - in com.Resourcewise.RunCukesTest
+initializationError(com.Resourcewise.RunCukesTest)  Time elapsed: 0.015 s  <<< ERROR!
+cucumber.runtime.CucumberException: Error parsing feature file endToEnd.feature
+Caused by: gherkin.parser.ParseError: Parse error at endToEnd.feature:1. Found eof when expecting one of: examples, feature, scenario, scenario_outline, tag. (Current getState: tag).
+
