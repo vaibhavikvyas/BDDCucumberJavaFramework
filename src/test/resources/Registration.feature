@@ -1,6 +1,6 @@
 @Registration
 
-@test5
+
 
 
 
@@ -13,7 +13,7 @@ Feature: Registration feature
     And I select Gender Female
     And I enter following details to register
       | firstName | lastName | email          | password  | confirmPassword |
-      | vedant    | khunt    | test12@gmail.com | hello@123 | hello@123       |
+      | vedant    | khunt    | test123@gmail.com | hello@123 | hello@123       |
 
 #    And I Enter FirstName "Vaibhavi"
 #    And I enter LastName "Vyas"
@@ -45,7 +45,7 @@ Feature: Registration feature
     Then I should see log out button displayed
     Examples:
       | email              | password   |
-      | test12@gmail.com | hello@123|
+      | test123@gmail.com | hello@123|
 #      | vaibhavi22@yahoo.com | password22 |
 #      | vaibhavi23@yahoo.com | password23 |
 #      | vaibhavi24@yahoo.com | password24 |

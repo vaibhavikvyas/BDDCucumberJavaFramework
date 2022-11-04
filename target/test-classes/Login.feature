@@ -1,6 +1,6 @@
 @Login
 
-@test5
+
 
 Feature: LogIn feature
   As a customer
