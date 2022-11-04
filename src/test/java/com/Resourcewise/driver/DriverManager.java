@@ -48,10 +48,10 @@ public class DriverManager {
         switch (browser){
             case "chrome":
                 WebDriverManager.chromedriver().setup();
-                ChromeOptions options = new ChromeOptions();
-                options.setHeadless(true);
-                options.addArguments("--window-size=1920,1080");
-                driver = new ChromeDriver(options);
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.setHeadless(true);
+                chromeOptions.addArguments("--window-size=1920,1080");
+                driver = new ChromeDriver(chromeOptions);
 
                 break;
             case "firefox":
