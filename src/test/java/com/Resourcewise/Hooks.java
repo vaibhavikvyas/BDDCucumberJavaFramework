@@ -15,13 +15,13 @@ public class Hooks {
         driverManager.runInHeadlessBrowser();
         driverManager.openWebPage();
         driverManager.maximiseBrowser();
-        driverManager.applyImplicitWait(1000);
+        driverManager.applyImplicitWait(500);
 
     }
 
     @After
     public void tearDown() throws InterruptedException {
-        driverManager.sleepBrowser(3000);
+        //driverManager.sleepBrowser(3000);
         driverManager.quitBrowser();
     }
 
