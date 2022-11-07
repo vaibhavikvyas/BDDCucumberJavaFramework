@@ -35,8 +35,8 @@ public class RegisterPage extends DriverManager {
     }
 
     public void enterEmail(String email) {
-//        Random rnd = new Random();
-//        email=rnd.nextInt(100)+email;
+        Random rnd = new Random();
+        email=rnd.nextInt(100)+email;
         inputEnterEmail.sendKeys(email);
     }
 

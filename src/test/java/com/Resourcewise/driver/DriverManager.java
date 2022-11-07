@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class DriverManager {
@@ -77,6 +78,11 @@ public class DriverManager {
     public void maximiseBrowser(){
         driver.manage().window().maximize();
     }
+
+//    public int randomNumber(){
+//        Random rnd = new Random();
+//        return rnd.nextInt();
+//    }
     public void openWebPage(){
         driver.get(url);
     }
